@@ -1,5 +1,5 @@
 <div class="auth-page">
-<!--  ======={{isSubmitting$ | async}}=======-->
+  <!--  ======={{isSubmitting$ | async}}=======-->
   <div class="container page">
     <div class="row">
       <div class="col-md-6 offset-md-3 col-xs-12">
@@ -8,7 +8,11 @@
           <a routerLink="/login">Have an account?</a>
         </p>
         BackendErrors are here
-        <form id="registerForm"(submit)="onSubmit();$event.preventDefault();" formGroup="registerForm">
+        <form
+          [formGroup]="registerForm"
+          id="registerForm"
+          (submit)="$event.preventDefault(); onSubmit()"
+        >
           <fieldset>
             <fieldset class="form-group">
               <input
