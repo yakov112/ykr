@@ -27,6 +27,7 @@ import { authRoutes } from './auth.routes';
     //   logOnly: environment.production,
     // }),
     StoreModule.forFeature('auth', reducers),
+    EffectsModule.forFeature([RegisterEffect]),
   ],
   providers: [AuthService],
 })
